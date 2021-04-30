@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+signup{% endblock title %} 
+{% block body %}
+<div class="container">
+ <h1 style="margin-left: 250px; text-emphasis-color: blue;">Add developer information here...</h1><form method="POST" action="/addinfo" class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4"
+  >
+  {% csrf_token %}
+    <label for="validationCustom01" class="form-label"></label>
+    <input type="text" name="name" class="form-control" id="validationCustom01" required placeholder="Enter your name">
+    <div class="valid-feedback" >
+      Looks good!
+    </div>
+
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label"></label>
+    <input type="email" class="form-control" id="validationCustom02" name="email" required placeholder="Enter your eamil">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label"></label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend"></span>
+      <input type="text" name="tech"class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required placeholder="Enter your technology">
+      <div class="invalid-feedback">
+        Please choose a technology.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    
+      <input type="text" name="loc1"class="form-control" id="" placeholder="enter your location">
+    </div><br><div class="col-md-6">
+        
+        <input type="text" class="form-control" name="domain" id="" placeholder="enter your Domain">
+      </div>
+
+  
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label"></label>
+    <input type="text" name="proj" class="form-control" id="validationCustom05" required placeholder="Title of projects ">
+    <div class="invalid-feedback">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label"></label>
+    <input type="text" name="blo1" class="form-control" id="validationCustom05" required placeholder="Title of blog ">
+    <div class="invalid-feedback">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label"></label>
+    <input type="number" name="developer_rating" class="form-control" id="validationCustom05" required placeholder="Q&A rating">
+    <div class="invalid-feedback">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label"></label>
+    <input type="number" name="score" class="form-control" id="validationCustom05" required placeholder="Score">
+    <div class="invalid-feedback">
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form></div>{% endblock body %}
+  

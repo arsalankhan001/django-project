@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+
+{% block title %}developer information{% endblock title %}
+{% block body %}<table class="table caption-top">
+    <caption>List of Developers</caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Technology</th>
+        <th scope="col">Location</th>
+        <th scope="col">Domain</th>
+        <th scope="col">Title of Project</th>
+        <th scope="col">Title of Blog</th>
+        <th scope="col">Q&A Rating</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+  
+  {%for dev in allpost%}
+    <tbody>
+  <tr>
+  <td>{{dev.name}}</td>
+  <td>{{dev.email}}</td>
+  <td>{{dev.tech}}</td>
+  <td>{{dev.loc1}}</td>
+  <td>{{dev.domain}}</td>
+  <td>{{dev.proj}}</td>
+  <td>{{dev.blo1}}</td>
+  <td>{{dev.developer_rating}}</td>
+  <td>{{dev.score}}</td>
+  </tr>
+  </tbody>
+  {%endfor%}
+  </table>
+  {% endblock body %}
+  
+  
